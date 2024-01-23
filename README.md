@@ -1,17 +1,15 @@
-Как запустить:
+Stage 1-2
 
-python3 -m venv venv
+How to run:
+1. python3 -m venv venv
+2. source ./venv/bin/activate
+3. pip3 install -r requirements.txt
+4. source .env
+5. python3 ./train.py
 
-source ./venv/bin/activate
+Stage 3
 
-pip3 install -r requirements.txt
+How to run (assuming mlflow is installed):
+1. source .env
+2. mlflow run . --env-manager=local --experiment-name=kinopoisk
 
-source .env
-
-python3 ./train.py
-
-Как запустить при наличии mlflow:
-
-source .env
-
-mlflow run . --env-manager=local --experiment-name=kinopoisk
